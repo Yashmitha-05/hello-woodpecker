@@ -1,0 +1,5 @@
+pipeline:
+  hello:
+    image: alpine
+    commands:
+      - echo "Hello Jenkins"
