@@ -1,15 +1,15 @@
+when:
+  - event: push
+    branch: main
+
 steps:
-  checkout:
-    image: alpine
+  - name: build
+    image: debian
     commands:
-      - echo "Checkout stage"
-
-  build:
-    image: alpine
+      - echo "This is the build step"
+      - echo "binary-data-123" > executable
+  - name: a-test-step
+    image: golang:1.16
     commands:
-      - echo "Build stage"
-
-  test:
-    image: alpine
-    commands:
-      - echo "Test stage"
+      - echo "Testing ..."
+      - ./executable
