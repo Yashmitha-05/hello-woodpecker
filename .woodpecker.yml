@@ -1,8 +1,9 @@
+skip_clone: true
+
 steps:
   hello:
     image: alpine
     commands:
       - echo "Hello Jenkins"
-    when:
-      event: push
+
 
