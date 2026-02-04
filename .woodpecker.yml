@@ -1,7 +1,7 @@
-pipeline:
+steps:
   print-param:
     image: alpine
     commands:
       - echo "Hello Woodpecker"
     when:
-      event: [push, pull_request, manual] # This clears the 'event filter' warning
+      event: [push, pull_request, manual] # Clears the [bad_habit] warning
