@@ -3,4 +3,7 @@ steps:
     image: openjdk:17
     commands:
       - javac Hello.java
-      - java Hello
+
+artifacts:
+  paths:
+    - Hello.class
