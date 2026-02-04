@@ -1,8 +1,7 @@
-when:
-  event: push
-
 steps:
-  hello:
+  print-param:
     image: alpine
+    environment:
+      USERNAME: yash
     commands:
-      - echo "Hello Jenkins"
+      - echo "Username is $USERNAME"
