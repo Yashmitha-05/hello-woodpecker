@@ -1,7 +1,7 @@
-steps:
+pipeline:
   print-param:
     image: alpine
-    environment:
-      USERNAME: yash
     commands:
-      - echo "Username is $USERNAME"
+      - echo "Hello Woodpecker"
+    when:
+      event: [push, pull_request, manual] # This clears the 'event filter' warning
