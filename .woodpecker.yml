@@ -1,9 +1,15 @@
 steps:
-  java-build:
-    image: openjdk:17
+  checkout:
+    image: alpine
     commands:
-      - javac Hello.java
+      - echo "Checkout stage"
 
-artifacts:
-  paths:
-    - Hello.class
+  build:
+    image: alpine
+    commands:
+      - echo "Build stage"
+
+  test:
+    image: alpine
+    commands:
+      - echo "Test stage"
