@@ -3,3 +3,6 @@ steps:
     image: alpine
     commands:
       - echo "Hello Jenkins"
+    when:
+      event: push
+
