@@ -1,7 +1,6 @@
 steps:
-  print-param:
-    image: alpine
+  java-build:
+    image: openjdk:17
     commands:
-      - echo "Hello Woodpecker"
-    when:
-      event: [push, pull_request, manual] # Clears the [bad_habit] warning
+      - javac Hello.java
+      - java Hello
